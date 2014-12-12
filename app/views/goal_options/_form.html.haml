@@ -1,0 +1,14 @@
+= form_for @goal_option do |f|
+  %br/
+  %br/
+  = f.label :name
+  = f.text_field :name
+  %br/
+  = f.label :quantity
+  = f.text_field :quantity
+  %br
+  %br/
+  = f.submit
+  %br
+  %br
+  = link_to "Back", root_path

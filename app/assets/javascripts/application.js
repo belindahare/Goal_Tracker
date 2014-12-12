@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min.js
+//dataTables.boostrap.js
+//= require jquery-1.10.2.js
+//= require jquery.metisMenu.js 
 //= require turbolinks
 //= require_tree .
