@@ -48,20 +48,20 @@
         / %i.fa.fa-edit
         / %a.btn.btn-success.square-btn-adjust{:href => new_goal_path} Add Track
         / = render 'form'
-        / = form_for @goal do |f|
-        /   %br/
-        /   %br/
-        /   = f.label :name
-        /   = f.text_field :name
-        /   %br/
-        /   = f.label :quantity
-        /   = f.text_field :quantity
-        /   %br
-        /   %br/
-        /   = f.submit
-        /   %br
-        /   %br
-        /   = link_to "Back", root_path
+        = form_for @goal do |f|
+          %br/
+          %br/
+          = f.label :name
+          = f.text_field :name
+          %br/
+          = f.label :quantity
+          = f.text_field :quantity
+          %br
+          %br/
+          = f.submit
+          %br
+          %br
+          = link_to "Back", root_path
   .col-md-3.col-sm-12.col-xs-12
     .panel.back-dash
       %i.fa.fa-dashboard.fa-3x
