@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141210222330) do
 
-  create_table "goal_options", force: true do |t|
+  create_table "goals", force: true do |t|
     t.string   "name"
     t.integer  "quantity"
     t.datetime "created_at"

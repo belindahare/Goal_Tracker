@@ -35,10 +35,10 @@
       %span.icon-box.bg-color-blue
         %i.fa.fa-warning
       .text-box
-        / %h2 Tracks
-        / %ul.tracks
-        /   - @goal_options.each do |goal_option|
-        /     %li #{@goal_option.name}
+        %h2 Tracks
+        / = goal_list
+        - @goals.each do |goal|
+          = link_to goal.name, goal_path(goal)
         %p.main-text Add A Track
         %br
         %p.text-muted Don't see a goal that fits your needs? Add one! 
@@ -46,8 +46,22 @@
         / %p.text-muted
         /   %span.text-muted.color-bottom-txt
         / %i.fa.fa-edit
-        %a.btn.btn-success.square-btn-adjust{:href => new_goal_option_path} Add Track
+        / %a.btn.btn-success.square-btn-adjust{:href => new_goal_path} Add Track
         / = render 'form'
+        / = form_for @goal do |f|
+        /   %br/
+        /   %br/
+        /   = f.label :name
+        /   = f.text_field :name
+        /   %br/
+        /   = f.label :quantity
+        /   = f.text_field :quantity
+        /   %br
+        /   %br/
+        /   = f.submit
+        /   %br
+        /   %br
+        /   = link_to "Back", root_path
   .col-md-3.col-sm-12.col-xs-12
     .panel.back-dash
       %i.fa.fa-dashboard.fa-3x
